@@ -13,7 +13,7 @@ const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
 export const generateNewYearPrediction = async (category: string): Promise<string> => {
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-3-flash-preview",
+      model: "gemini-2.0-flash",
       contents: `Придумай ОДНО доброе и вдохновляющее предсказание на 2026 год. 
       СФЕРА: ${category}.
       
