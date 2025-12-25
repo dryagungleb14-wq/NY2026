@@ -133,8 +133,8 @@ const App: React.FC = () => {
 
       <header className="text-center mb-20 max-w-3xl relative">
         <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter leading-none uppercase">
-          Новогодние предсказания<br />
-          <span className="text-[#00E676] font-light italic normal-case">Korean Simple Style</span>
+          Новогодние предсказания 2026<br />
+          <span className="text-[#00E676] font-light italic normal-case">Korean Simple</span>
         </h1>
         <p className="text-gray-400 text-sm md:text-base max-w-md mx-auto leading-relaxed italic opacity-80 font-light">
           Минимализм и магия: разломите печенье, чтобы узнать, что подготовил вам 2026 год
