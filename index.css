@@ -1,0 +1,94 @@
+/* Custom styles for New Year Predictions 2026 */
+
+/* Constants */
+:root {
+  --color-primary: #C62828;
+  --color-accent: #00E676;
+  --color-background: #121212;
+  --color-surface: #1E1E1E;
+  --color-text: #E0E0E0;
+  --snowflake-count: 70;
+  --garland-lights: 25;
+}
+
+/* Garland animation */
+@keyframes glow {
+  from {
+    opacity: 0.4;
+    transform: scale(0.9);
+    filter: brightness(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.1);
+    filter: brightness(1.5);
+  }
+}
+
+/* Cookie shake animation */
+.cookie-shake:hover {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(3deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(-3deg) scale(1.05);
+  }
+}
+
+/* Snowfall animation */
+.snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.snowflake {
+  position: absolute;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) translateX(0);
+  }
+  100% {
+    transform: translateY(110vh) translateX(20px);
+  }
+}
+
+/* Korean-style decorative elements */
+.korean-border {
+  border: 2px solid var(--color-text);
+}
+
+.korean-shadow {
+  box-shadow: 4px 4px 0px var(--color-primary);
+}
+
+/* Modal fade-in animation */
+.animate-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
