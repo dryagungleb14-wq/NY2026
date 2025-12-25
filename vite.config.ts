@@ -1,15 +1,17 @@
 
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 
-// Объявляем process, чтобы tsc не ругался во время сборки
-declare var process: any;
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
 
-export default defineConfig({
-  base: './', // Важно для GitHub Pages
-  define: {
-    'process.env.API_KEY': JSON.stringify(process.env.API_KEY)
-  },
-  server: {
-    port: 3000
-  }
+  return {
+    base: './',
+    define: {
+      'process.env.API_KEY': JSON.stringify(env.API_KEY)
+    },
+    server: {
+      port: 3000
+    }
+  };
 });
+
