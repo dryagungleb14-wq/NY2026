@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import CookieItem from './components/CookieItem';
 import PredictionModal from './components/PredictionModal';
+import MusicPlayer from './components/MusicPlayer';
 import { generateNewYearPrediction } from './services/geminiService';
 import { CookieState } from './types';
 
@@ -168,6 +169,8 @@ const App: React.FC = () => {
 
       <div className="fixed bottom-10 left-10 text-6xl opacity-5 hidden xl:block select-none pointer-events-none transform -rotate-12">🧧</div>
       <div className="fixed top-40 right-10 text-6xl opacity-5 hidden xl:block select-none pointer-events-none transform rotate-12">🍊</div>
+
+      <MusicPlayer />
 
       <PredictionModal
         prediction={activePrediction}
